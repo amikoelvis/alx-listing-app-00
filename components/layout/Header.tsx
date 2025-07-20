@@ -1,12 +1,28 @@
 import { useState } from "react";
-import { 
-  FiSearch, FiMapPin, FiCalendar, FiUsers 
+import Image from "next/image";
+import {
+  FiSearch,
+  FiMapPin,
+  FiCalendar,
+  FiUsers,
 } from "react-icons/fi";
-import { 
-  FaHome, FaBuilding, FaMountain, FaUmbrellaBeach, FaSwimmingPool, FaCampground, 
-  FaTree, FaWarehouse, FaCity, FaHouseUser, FaWater, FaTractor, FaHotel, FaLandmark 
+import {
+  FaHome,
+  FaBuilding,
+  FaMountain,
+  FaUmbrellaBeach,
+  FaSwimmingPool,
+  FaCampground,
+  FaTree,
+  FaWarehouse,
+  FaCity,
+  FaHouseUser,
+  FaWater,
+  FaTractor,
+  FaHotel,
+  FaLandmark,
 } from "react-icons/fa";
-import { FaTreeCity, FaSuitcaseRolling } from "react-icons/fa6"; // ✅ Travel suitcase icon
+import { FaTreeCity, FaSuitcaseRolling } from "react-icons/fa6";
 
 const Header: React.FC = () => {
   const [location, setLocation] = useState("");
@@ -34,25 +50,32 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full border-b">
-      {/* ✅ Top banner with React Icon */}
-      <div className="bg-emerald-600 text-white text-center py-2 text-sm flex justify-center items-center gap-2">
-        <FaSuitcaseRolling className="text-white text-lg" />  
-        <span>Overseas trip? Get the latest information on travel guides</span>
+      {/* ✅ Top banner */}
+      <div className="bg-emerald-600 text-white text-center py-2 text-sm flex flex-wrap justify-center items-center gap-2 px-4">
+        <FaSuitcaseRolling className="text-white text-lg" />
+        <span className="text-xs sm:text-sm">
+          Overseas trip? Get the latest information on travel guides
+        </span>
         <button className="bg-black text-white text-xs px-3 py-1 rounded-full">
           More Info
         </button>
       </div>
 
       {/* ✅ Main Header */}
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-2xl font-bold text-gray-900 cursor-pointer">
-          al<span className="text-black">x</span>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+        {/* ✅ Logo Image */}
+        <div className="flex-shrink-0">
+          <Image
+            src="/images/logo.png"
+            alt="ALX Logo"
+            width={60}
+            height={20}
+            priority
+          />
         </div>
 
-        {/* ✅ Search Bar */}
-        <div className="hidden lg:flex items-center gap-4 bg-white border rounded-full px-4 py-2 shadow-sm flex-grow max-w-3xl mx-4">
-          {/* Location */}
+        {/* ✅ Search Bar (hidden on mobile) */}
+        <div className="hidden lg:flex items-center gap-4 bg-white border border-[#F6F6F6] rounded-full px-4 py-2 shadow-sm flex-grow max-w-3xl mx-4">
           <div className="flex items-center gap-2 flex-1">
             <FiMapPin className="text-gray-500" />
             <input
@@ -63,10 +86,8 @@ const Header: React.FC = () => {
               className="w-full text-sm focus:outline-none"
             />
           </div>
-
           <span className="text-gray-300">|</span>
 
-          {/* Check-in */}
           <div className="flex items-center gap-2 flex-1">
             <FiCalendar className="text-gray-500" />
             <input
@@ -75,10 +96,8 @@ const Header: React.FC = () => {
               className="w-full text-sm focus:outline-none"
             />
           </div>
-
           <span className="text-gray-300">|</span>
 
-          {/* Check-out */}
           <div className="flex items-center gap-2 flex-1">
             <FiCalendar className="text-gray-500" />
             <input
@@ -87,10 +106,8 @@ const Header: React.FC = () => {
               className="w-full text-sm focus:outline-none"
             />
           </div>
-
           <span className="text-gray-300">|</span>
 
-          {/* People */}
           <div className="flex items-center gap-2 flex-1">
             <FiUsers className="text-gray-500" />
             <input
@@ -100,7 +117,6 @@ const Header: React.FC = () => {
             />
           </div>
 
-          {/* Search Button */}
           <button className="bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500 transition">
             <FiSearch size={18} />
           </button>
@@ -108,17 +124,17 @@ const Header: React.FC = () => {
 
         {/* ✅ Auth Buttons */}
         <div className="flex gap-2">
-          <button className="px-4 py-2 bg-emerald-600 text-white rounded-full hover:bg-emerald-700">
+          <button className="px-4 py-2 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 text-sm">
             Sign in
           </button>
-          <button className="px-4 py-2 border rounded-full hover:bg-gray-100">
+          <button className="px-4 py-2 border rounded-full hover:bg-gray-100 text-sm">
             Sign up
           </button>
         </div>
       </div>
 
-      {/* ✅ Categories */}
-      <div className="overflow-x-auto border-t">
+      {/* ✅ Categories (horizontally scrollable on small screens) */}
+      <div className="overflow-x-auto border-t border-[#F6F6F6]">
         <div className="flex gap-6 px-4 py-3 whitespace-nowrap max-w-7xl mx-auto text-sm text-gray-700">
           {categories.map((cat, i) => (
             <div
@@ -135,5 +151,4 @@ const Header: React.FC = () => {
   );
 };
 
-// ✅ Export at the end
 export default Header;

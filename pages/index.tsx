@@ -27,7 +27,7 @@ const Home: React.FC = () => {
   return (
     <>
       {/* 🖼 Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[75vh] lg:h-[80vh]">
+      <section className="relative max-w-7xl mx-auto mt-6 h-[60vh] md:h-[75vh] lg:h-[80vh] rounded-3xl overflow-hidden px-4">
         <Image
           src={HERO_IMAGE}
           alt="Scenic nature view"
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* 🏡 Listings Grid */}
-      <section className="max-w-7xl mx-auto px-4 pb-20">
+      <section className="max-w-7xl mx-auto px-4 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredListings.map((property: PropertyProps, index) => (
             <Card
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
               image={property.image}
               title={property.name}
               location={`${property.address.city}, ${property.address.country}`}
-              price={`$${property.price}/night`}
+              price={`$${property.price}/n`}
               rating={property.rating}
               tags={property.category}
               guests={parseInt(property.offers.occupants.split('-')[0]) || 1}
@@ -77,6 +77,16 @@ const Home: React.FC = () => {
             />
           ))}
         </div>
+      </section>
+
+      {/* ➕ Show More Button Section */}
+      <section className="max-w-7xl mx-auto px-4 pb-20 text-center">
+        <button className="bg-black text-white px-6 py-3 rounded-full text-sm hover:bg-gray-900 transition">
+          Show more
+        </button>
+        <p className="mt-2 text-sm text-gray-500">
+          Click to see more listings
+        </p>
       </section>
     </>
   )

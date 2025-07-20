@@ -19,14 +19,14 @@ const Card: React.FC<CardProps> = ({
   discountText = '',
 }) => {
   return (
-    <div className="relative bg-black rounded-xl overflow-hidden shadow-lg transition hover:scale-[1.015] duration-300">
+    <div className="relative bg-white rounded-xl overflow-hidden transition hover:scale-[1.015] duration-300">
       {/* Image */}
       <div className="relative w-full h-60">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover rounded-xl"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
         {/* Discount Badge */}
@@ -38,50 +38,52 @@ const Card: React.FC<CardProps> = ({
       </div>
 
       {/* Content */}
-      <div className="p-4 text-white">
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 text-xs mb-2">
-          {tags.map((tag, i) => (
-            <span
-              key={i}
-              className="bg-white bg-opacity-10 border border-white border-opacity-20 px-2 py-1 rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+<div className="p-4">
+  {/* Tags */}
+  <div className="flex flex-wrap gap-2 text-xs mb-2">
+    {tags.map((tag, i) => (
+      <span
+        key={i}
+        className="bg-[#F9F9F9] text-[#161117] bg-opacity-10 border border-white border-opacity-20 px-2 py-1 rounded-full"
+      >
+        {tag}
+      </span>
+    ))}
+  </div>
 
-        {/* Title */}
-        <h3 className="font-semibold text-base truncate">{title}</h3>
+  {/* Title & Rating */}
+  <div className="flex justify-between items-start">
+    <h3 className="font-semibold text-[#161117] text-base truncate">{title}</h3>
+    <div className="flex items-center gap-1 text-sm text-yellow-500">
+      <FaStar />
+      {rating.toFixed(1)}
+    </div>
+  </div>
 
-        {/* Location */}
-        <p className="text-sm text-gray-400">{location}</p>
+  {/* Location */}
+  <p className="text-sm text-[#929292] mt-1">{location}</p>
 
-        {/* Price & Rating */}
-        <div className="flex justify-between items-center mt-2">
-          <span className="font-semibold text-lg">{price}</span>
-          <div className="flex items-center gap-1 text-sm">
-            <FaStar className="text-yellow-400" />
-            {rating.toFixed(1)}
-          </div>
-        </div>
+  {/* Price & Specs */}
+<div className="flex justify-between items-center mt-3">
+  <div className="flex items-center gap-3 text-xs text-gray-400 border p-1 rounded-xl">
+    <div className="flex items-center gap-1">
+      <FaUsers />
+      <span>{guests}</span>
+    </div>
+    <div className="flex items-center gap-1">
+      <FaBed />
+      <span>{beds}</span>
+    </div>
+    <div className="flex items-center gap-1">
+      <FaBath />
+      <span>{baths}</span>
+    </div>
+  </div>
+  <span className="font-semibold font-[22px] text-lg">{price}</span>
+</div>
 
-        {/* Specs */}
-        <div className="flex items-center gap-4 text-xs text-gray-400 mt-3">
-          <div className="flex items-center gap-1">
-            <FaUsers />
-            <span>{guests}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <FaBed />
-            <span>{beds}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <FaBath />
-            <span>{baths}</span>
-          </div>
-        </div>
-      </div>
+</div>
+
     </div>
   )
 }
