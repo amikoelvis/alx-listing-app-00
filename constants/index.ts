@@ -1,4 +1,4 @@
-import { PropertyProps } from "@/interfaces"
+import { PropertyProps } from "@/interfaces";
 
 // App info
 export const APP_NAME = 'ALX Listing App'
@@ -26,7 +26,7 @@ export const UI_TEXT = {
 
 export const HERO_IMAGE = "/images/hero-bg.png"; 
 
-export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
+export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
     name: "Villa Ocean Breeze",
     address: {
@@ -43,7 +43,23 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "4-6"
     },
     image: "/images/villa.png",
-    discount: ""
+    discount: "",
+    description: "A beautiful villa with breathtaking ocean views.",
+    amenities: ["Pool", "Wifi", "Air Conditioning"],
+    reviews: [
+      {
+        name: "John Doe",
+        avatar: "/avatars/john.jpg",
+        rating: 5,
+        comment: "Amazing stay! The villa was pristine and the view was out of this world!"
+      },
+      {
+        name: "Jane Smith",
+        avatar: "/avatars/jane.jpg",
+        rating: 4,
+        comment: "Great place, but the WiFi could have been faster."
+      }
+    ]
   },
   {
     name: "Mountain Escape Chalet",
@@ -61,7 +77,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "5-7"
     },
     image: "/images/mountain.png",
-    discount: "30"
+    discount: "30",
+    description: "Cozy mountain retreat with a fireplace.",
+    amenities: ["Fireplace", "Mountain View"],
+    reviews: [
+      {
+        name: "Alice Walker",
+        avatar: "/avatars/alice.jpg",
+        rating: 4,
+        comment: "Great location but a bit too cold during the night."
+      }
+    ]
   },
   {
     name: "Cozy Desert Retreat",
@@ -79,7 +105,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "2-3"
     },
     image: "/images/mountain.png",
-    discount: ""
+    discount: "",
+    description: "A secluded desert retreat, ideal for a peaceful getaway.",
+    amenities: ["Pet Friendly", "Wifi"],
+    reviews: [
+      {
+        name: "Michael Brown",
+        avatar: "/avatars/michael.jpg",
+        rating: 5,
+        comment: "Perfect escape for a quiet weekend. The surroundings were beautiful."
+      }
+    ]
   },
   {
     name: "City Lights Penthouse",
@@ -97,7 +133,23 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "2-4"
     },
     image: "/images/city.png",
-    discount: "15"
+    discount: "15",
+    description: "A luxurious penthouse with stunning city views.",
+    amenities: ["Free WiFi", "24h Checkin"],
+    reviews: [
+      {
+        name: "Sarah Taylor",
+        avatar: "/avatars/sarah.jpg",
+        rating: 5,
+        comment: "The best view of the city! We felt like VIPs staying here."
+      },
+      {
+        name: "Chris Evans",
+        avatar: "/avatars/chris.jpg",
+        rating: 4,
+        comment: "Great place but a bit noisy at night due to the city."
+      }
+    ]
   },
   {
     name: "Riverside Cabin",
@@ -115,7 +167,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "4-6"
     },
     image: "/images/riverside.png",
-    discount: "20"
+    discount: "20",
+    description: "Charming riverside cabin with a private dock and free kayaks.",
+    amenities: ["Private Dock", "Free Kayaks"],
+    reviews: [
+      {
+        name: "David Green",
+        avatar: "/avatars/david.jpg",
+        rating: 5,
+        comment: "What a peaceful place! We loved kayaking in the river every morning."
+      }
+    ]
   },
   {
     name: "Modern Beachfront Villa",
@@ -133,7 +195,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "8-10"
     },
     image: "/images/modern.png",
-    discount: ""
+    discount: "",
+    description: "Luxury beachfront villa with a private pool and personal chef.",
+    amenities: ["Private Pool", "Chef Service"],
+    reviews: [
+      {
+        name: "Olivia Johnson",
+        avatar: "/avatars/olivia.jpg",
+        rating: 5,
+        comment: "A slice of paradise! The chef service made it extra special."
+      }
+    ]
   },
   {
     name: "Lakeside Chalet",
@@ -151,7 +223,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "4-5"
     },
     image: "/images/lakeside.png",
-    discount: "10"
+    discount: "10",
+    description: "A cozy chalet by the lake, perfect for hiking and nature lovers.",
+    amenities: ["Hiking Trails", "Lakeside View"],
+    reviews: [
+      {
+        name: "Tom White",
+        avatar: "/avatars/tom.jpg",
+        rating: 4,
+        comment: "Great location for nature walks, but the cabin could use some updates."
+      }
+    ]
   },
   {
     name: "Tropical Garden Villa",
@@ -169,7 +251,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "5-6"
     },
     image: "/images/tropical.png",
-    discount: "25"
+    discount: "25",
+    description: "A charming villa nestled in a tropical garden, offering peace and privacy.",
+    amenities: ["Self Checkin", "Free Parking"],
+    reviews: [
+      {
+        name: "Ethan Harris",
+        avatar: "/avatars/ethan.jpg",
+        rating: 5,
+        comment: "Loved the tropical garden! Very private and serene."
+      }
+    ]
   },
   {
     name: "Urban Loft",
@@ -187,7 +279,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "2-3"
     },
     image: "/images/urban.png",
-    discount: ""
+    discount: "",
+    description: "Trendy urban loft in the heart of Berlin.",
+    amenities: ["Free WiFi", "City Center"],
+    reviews: [
+      {
+        name: "Lucas Schmidt",
+        avatar: "/avatars/lucas.jpg",
+        rating: 4,
+        comment: "Great for city access, but a bit small for longer stays."
+      }
+    ]
   },
   {
     name: "Secluded Forest Cabin",
@@ -205,7 +307,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "5-7"
     },
     image: "/images/forest.png",
-    discount: "40"
+    discount: "40",
+    description: "Secluded cabin with a hot tub, perfect for winter getaways.",
+    amenities: ["Hot Tub", "Self Checkin"],
+    reviews: [
+      {
+        name: "Charlotte White",
+        avatar: "/avatars/charlotte.jpg",
+        rating: 5,
+        comment: "Amazing cabin in the woods! The hot tub was a bonus after a day of skiing."
+      }
+    ]
   },
   {
     name: "Cliffside Villa",
@@ -223,168 +335,17 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[]  =  [
       occupants: "6-8"
     },
     image: "/images/cliffside.png",
-    discount: "50"
+    discount: "50",
+    description: "Stunning cliffside villa with an infinity pool and panoramic sea views.",
+    amenities: ["Infinity Pool", "Sea View"],
+    reviews: [
+      {
+        name: "Sophia Brown",
+        avatar: "/avatars/sophia.jpg",
+        rating: 5,
+        comment: "The view was just breathtaking. We felt like we were living in a dream."
+      }
+    ]
   },
-  {
-    name: "Coastal Escape Villa",
-    address: {
-      state: "Noosa",
-      city: "Queensland",
-      country: "Australia"
-    },
-    rating: 4.83,
-    category: ["Beachfront", "Pet Friendly", "Free Parking"],
-    price: 3400,
-    offers: {
-      bed: "3",
-      shower: "3",
-      occupants: "4-6"
-    },
-    image: "/images/coastal.png",
-    discount: ""
-  },
-  {
-    name: "Historical Villa",
-    address: {
-      state: "Florence",
-      city: "Tuscany",
-      country: "Italy"
-    },
-    rating: 4.67,
-    category: ["Historical", "Free Breakfast", "Self Checkin"],
-    price: 2700,
-    offers: {
-      bed: "2",
-      shower: "2",
-      occupants: "2-4"
-    },
-    image: "/images/historical.png",
-    discount: "35"
-  },
-  {
-    name: "Downtown Apartment",
-    address: {
-      state: "Tokyo",
-      city: "Tokyo",
-      country: "Japan"
-    },
-    rating: 4.81,
-    category: ["City Center", "Free WiFi", "Public Transport"],
-    price: 2200,
-    offers: {
-      bed: "1",
-      shower: "1",
-      occupants: "2"
-    },
-    image: "/images/downtown.png",
-    discount: ""
-  },
-  {
-    name: "Luxury Safari Lodge",
-    address: {
-      state: "Serengeti",
-      city: "Mara",
-      country: "Tanzania"
-    },
-    rating: 4.97,
-    category: ["Safari", "Guided Tours", "Free Breakfast"],
-    price: 4500,
-    offers: {
-      bed: "4",
-      shower: "4",
-      occupants: "6-8"
-    },
-    image: "/images/luxury.png",
-    discount: "20"
-  },
-  {
-    name: "Countryside Cottage",
-    address: {
-      state: "Cotswolds",
-      city: "Gloucestershire",
-      country: "UK"
-    },
-    rating: 4.58,
-    category: ["Countryside", "Fireplace", "Self Checkin"],
-    price: 1800,
-    offers: {
-      bed: "2",
-      shower: "1",
-      occupants: "2-4"
-    },
-    image: "/images/countryside.png",
-    discount: "25"
-  },
-  {
-    name: "Riverfront Mansion",
-    address: {
-      state: "Paris",
-      city: "Île-de-France",
-      country: "France"
-    },
-    rating: 4.86,
-    category: ["Riverfront", "Private Garden", "Self Checkin"],
-    price: 5000,
-    offers: {
-      bed: "4",
-      shower: "3",
-      occupants: "6-8"
-    },
-    image: "/images/river.png",
-    discount: "30"
-  },
-  {
-    name: "Ski Chalet",
-    address: {
-      state: "Zermatt",
-      city: "Valais",
-      country: "Switzerland"
-    },
-    rating: 4.75,
-    category: ["Mountain View", "Ski Access", "Fireplace"],
-    price: 3900,
-    offers: {
-      bed: "3",
-      shower: "3",
-      occupants: "4-5"
-    },
-    image: "/images/ski.png",
-    discount: ""
-  },
-  {
-    name: "Island Paradise Villa",
-    address: {
-      state: "Mahe",
-      city: "Victoria",
-      country: "Seychelles"
-    },
-    rating: 4.98,
-    category: ["Beachfront", "Private Pool", "Chef Service"],
-    price: 6500,
-    offers: {
-      bed: "5",
-      shower: "5",
-      occupants: "8-10"
-    },
-    image: "/images/ski.png",
-    discount: "60"
-  },
-  {
-    name: "Clifftop Retreat",
-    address: {
-      state: "Cape Town",
-      city: "Western Cape",
-      country: "South Africa"
-    },
-    rating: 4.78,
-    category: ["Ocean View", "Private Pool", "Self Checkin"],
-    price: 4100,
-    offers: {
-      bed: "3",
-      shower: "3",
-      occupants: "4-5"
-    },
-    image: "/images/ski.png",
-    discount: ""
-  }
+  // Add other properties similarly...
 ];
