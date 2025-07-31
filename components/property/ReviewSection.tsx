@@ -1,12 +1,6 @@
-import Image from "next/image"; // Import Next.js Image component
+import { Review } from "@/interfaces";
+import Image from "next/image"; 
 import { FaStar } from "react-icons/fa"; // Star icon
-
-interface Review {
-  name: string;
-  avatar: string;
-  rating: number;
-  comment: string;
-}
 
 const ReviewSection: React.FC<{ reviews: Review[] }> = ({ reviews }) => {
   return (
@@ -17,11 +11,11 @@ const ReviewSection: React.FC<{ reviews: Review[] }> = ({ reviews }) => {
           {/* Review User */}
           <div className="flex items-center">
             <div className="relative w-12 h-12 mr-4">
-              {/* Next.js Image for avatar */}
+              {/* avatar */}
               <Image
                 src={review.avatar}
                 alt={review.name}
-                layout="fill" // Automatically fills the container
+                layout="fill"
                 className="rounded-full"
               />
             </div>
