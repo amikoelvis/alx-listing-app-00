@@ -22,13 +22,20 @@ export interface ButtonProps {
   disabled?: boolean
 }
 
-export interface PropertyAddress {
+export interface Review {
+  name: string;
+  avatar: string;
+  rating: number;
+  comment: string;
+}
+
+export interface Address {
   state: string;
   city: string;
   country: string;
 }
 
-export interface PropertyOffers {
+export interface Offers {
   bed: string;
   shower: string;
   occupants: string;
@@ -36,11 +43,14 @@ export interface PropertyOffers {
 
 export interface PropertyProps {
   name: string;
-  address: PropertyAddress;
+  address: Address;
   rating: number;
   category: string[];
   price: number;
-  offers: PropertyOffers;
+  offers: Offers;
   image: string;
   discount: string;
+  description: string;
+  amenities: string[];
+  reviews: Review[];
 }
